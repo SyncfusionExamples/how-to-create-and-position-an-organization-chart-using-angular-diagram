@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DiagramModule, SnappingService } from '@syncfusion/ej2-angular-diagrams'; 
-import { AppRoutingModule } from './app-routing.module';
+import { DiagramModule } from '@syncfusion/ej2-angular-diagrams'; 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    
   ],
   imports: [
     BrowserModule,
     DiagramModule,
-    AppRoutingModule
   ],
-  providers: [SnappingService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
