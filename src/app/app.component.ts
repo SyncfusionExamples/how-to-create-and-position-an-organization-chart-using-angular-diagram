@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,ViewEncapsulation } from '@angular/core';
 import { ConnectorModel, DataBinding, Diagram, HierarchicalTree, LayoutModel,
-NodeModel, SnapConstraints, SnapSettingsModel } from '@syncfusion/ej2-angular-diagrams';
+NodeModel, SnapConstraints,DiagramModule, SnapSettingsModel } from '@syncfusion/ej2-angular-diagrams';
 import {DataManager, Query} from '@syncfusion/ej2-data';
 Diagram.Inject(DataBinding, HierarchicalTree);
 export interface EmployeeInfo {
@@ -13,7 +13,10 @@ export interface DataInfo {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports:[DiagramModule],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
   title = 'angular-diagram';
